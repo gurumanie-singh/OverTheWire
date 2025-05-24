@@ -1,0 +1,24 @@
+Level Goal:
+The password for the next level is stored in a hidden file in the inhere directory.
+
+Notes:
+Logging into the next level. When we do ls, we see the directory "inhere".
+We then cd into this directory.
+
+When we ls, we notice there is no files.
+Then we do:
+  ls -la
+
+Alternatively, we can also do:
+  ls -a  
+
+This shows us all the files. 
+It also shows this file called:
+...Hiding-From-You
+
+This is the file we want to access.
+
+Then we do:
+cat ...Hiding-From-You
+
+And we get the next password.
