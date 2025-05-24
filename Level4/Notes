@@ -1,0 +1,38 @@
+Level Goal:
+The password for the next level is stored in the only human-readable file in the inhere directory. 
+Tip: if your terminal is messed up, try the “reset” command.
+
+Notes:
+In order to find the password for next level, we need to look into a directory called "inhere".
+
+This directory contains file00 to file09 but they all start with "-file00"
+Meaning that we cannot just do:
+  cat -file00
+
+We need to do:
+  cat ./-file00
+
+This lets us read into the file. But this is not efficient since there are so many files. It is tedious to cat into each one.
+
+This is when we use the command below:
+  file ./-*
+
+The above command combines the approach we need to use to see into files that start with a "-".
+But since we included the "*" and we are using file instead of cat, it gives us the file type for all files that start with "-".
+
+Below is the output:
+  ./-file00: PGP Secret Sub-key -
+  ./-file01: data
+  ./-file02: data
+  ./-file03: data
+  ./-file04: data
+  ./-file05: data
+  ./-file06: data
+  ./-file07: ASCII text
+  ./-file08: data
+  ./-file09: data
+
+With the above, we can tell that the human readable file is file07. So finally we do:
+  cat ./-file07
+
+And now we have the password for the next level.
