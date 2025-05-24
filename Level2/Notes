@@ -1,0 +1,25 @@
+Level Goal:
+The password for the next level is stored in a file called "spaces in this filename" located in the home directory
+
+Notes:
+After using password found in the "-" file from last level.
+We now log in to bandit2.
+
+In this bandit2 directory, when we do ls, there is only one file called "spaces in this filename".
+
+If we try to do:
+  cat spaces in this filename
+
+Then the following is returned:
+  cat: spaces: No such file or directory
+  cat: in: No such file or directory
+  cat: this: No such file or directory
+  cat: filename: No such file or directory
+
+Instead, we need to do:
+  cat spaces\ in\ this\ filename
+
+Alternatively, we can also do:
+  cat "spaces in this filename" 
+
+This gives us the password.
