@@ -1,0 +1,14 @@
+Level Goal:
+The password for the next level is stored in a file called - located in the home directory
+
+Notes:
+From level 0 to 1. We got the password in the readme file. 
+To use that password and jump to new level, we exit the ssh, then re-enter login as bandit1 (for level 1), and new password given in readme.
+Then once logged into new level, we cd into bandit1 directory.
+Now when we ls, there is a - file.
+When we try to cat - , it does not work and we get sent back to home.
+‘-’ is a special symbol in Linux. So it is not recommended to start a file name with this symbol.
+
+Because of this, we need another way to access the file.
+So instead of writing just - we add the path and write ./- and the command works as it should.
+Now we have the password to the next level.
